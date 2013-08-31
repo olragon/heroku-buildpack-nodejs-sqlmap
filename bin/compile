@@ -193,7 +193,12 @@ echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $BUILD_DIR/.profile.d/nodejs.sh
 
-# support sqlmap
-curl https://www.filepicker.io/api/file/xicxyOqTdWioWsVaqwPb -o $BUILD_DIR/fakeroot.tar.gz
-tar --strip-components=1 -zxvf $BUILD_DIR/fakeroot.tar.gz
+# libsqlite3
+fakesu
+apt-get install build-essential
+apt-get install python2.6-dev
+apt-get install python-setuptools
+apt-get install libsqlite3-dev
+easy_install ctypes
+apt-get clean
 
