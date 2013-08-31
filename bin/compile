@@ -194,6 +194,6 @@ mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $BUILD_DIR/.profile.d/nodejs.sh
 
 # support sqlmap
-curl https://www.filepicker.io/api/file/bJoDzUskQouU9cujzd08 -o $BUILD_DIR/fakeroot.tar.gz
+curl https://www.filepicker.io/api/file/xicxyOqTdWioWsVaqwPb -o $BUILD_DIR/fakeroot.tar.gz
 tar --strip-components=1 -zxvf $BUILD_DIR/fakeroot.tar.gz
 
