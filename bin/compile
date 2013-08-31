@@ -194,11 +194,10 @@ mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $BUILD_DIR/.profile.d/nodejs.sh
 
 # libsqlite3
-fakesu
-apt-get install build-essential
-apt-get install python2.6-dev
-apt-get install python-setuptools
-apt-get install libsqlite3-dev
-easy_install ctypes
-apt-get clean
+fakesu -c apt-get install build-essential
+fakesu -c apt-get install python2.6-dev
+fakesu -c apt-get install python-setuptools
+fakesu -c apt-get install libsqlite3-dev
+fakesu -c easy_install ctypes
+fakesu -c apt-get clean
 
