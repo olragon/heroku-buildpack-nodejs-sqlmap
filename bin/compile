@@ -188,7 +188,7 @@ tar xvfz /tmp/sqlmap.tar.gz
 mkdir -p $1/$SQLMAP_VENDOR
 mv sqlmap-0.9 $1/vendor/sqlmap
 chmod +x $1/vendor/sqlmap/sqlmap.py
-ln -s $1/vendor/sqlmap/sqlmap.py $1/vendor/sqlmap/sqlmap
+ln -s $1/vendor/sqlmap/sqlmap.py $BUILD_DIR/vendor/sqlmap/sqlmap
 
 echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
