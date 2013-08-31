@@ -193,7 +193,3 @@ echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $BUILD_DIR/.profile.d/nodejs.sh
 
-# libsqlite3
-echo "-----> Install libsqlite3-dev"
-apt-get install libsqlite3-dev
-
