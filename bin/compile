@@ -186,7 +186,7 @@ SQLMAP_VENDOR="vendor/sqlmap"
 curl $SQLMAP_BINARY -s -o /tmp/sqlmap.tar.gz
 tar xvfz /tmp/sqlmap.tar.gz
 mkdir -p $1
-cp -r /tmp/sqlmap-0.9 $1/$SQLMAP_VENDOR
+mv sqlmap-0.9 $1/$SQLMAP_VENDOR
 
 echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
