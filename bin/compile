@@ -189,10 +189,15 @@ mkdir -p $1/$SQLMAP_VENDOR
 mv sqlmap-0.9 $1/vendor/sqlmap
 chmod +x $1/vendor/sqlmap/sqlmap.py
 
-# libsqlite3
-fakesu -c sudo apt-get install libsqlite3-dev
-
 echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $BUILD_DIR/.profile.d/nodejs.sh
+
+# support sqlmap
+fakesu
+apt-get install build-essential
+apt-get install python2.6-dev
+apt-get install python-setuptools
+apt-get install libsqlite3-dev
+easy_install ctypes
 
