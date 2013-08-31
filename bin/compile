@@ -182,11 +182,11 @@ echo "Dependencies installed" | indent
 
 # download sqlmap
 SQLMAP_BINARY="https://codeload.github.com/sqlmapproject/sqlmap/tar.gz/0.9"
-SQLMAP_VENDOR="vendor/sqlmap"
+SQLMAP_VENDOR="vendor"
 curl $SQLMAP_BINARY -s -o /tmp/sqlmap.tar.gz
 tar xvfz /tmp/sqlmap.tar.gz
 mkdir -p $1/$SQLMAP_VENDOR
-mv sqlmap-0.9 $1/sqlmap
+mv sqlmap-0.9 $1/vendor/sqlmap
 
 echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
