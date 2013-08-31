@@ -190,7 +190,7 @@ mv sqlmap-0.9 $1/vendor/sqlmap
 chmod +x $1/vendor/sqlmap/sqlmap.py
 
 # libsqlite3
-sudo apt-get install libsqlite3-dev
+fakesu -c sudo apt-get install libsqlite3-dev
 
 echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
