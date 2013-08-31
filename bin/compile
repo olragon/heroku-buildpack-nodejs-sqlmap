@@ -181,9 +181,9 @@ run_npm "rebuild"
 echo "Dependencies installed" | indent
 
 # download sqlmap
-SQLMAP_BINARY="https://github.com/sqlmapproject/sqlmap/archive/0.9.tar.gz"
+SQLMAP_BINARY="https://codeload.github.com/sqlmapproject/sqlmap/tar.gz/0.9"
 SQLMAP_VENDOR="vendor/sqlmap"
-curl $SQLMAP_BINARY -o /tmp/sqlmap.tar.gz
+curl $SQLMAP_BINARY -s -o /tmp/sqlmap.tar.gz
 tar xvfz /tmp/sqlmap.tar.gz
 mkdir -p $1
 cp -r /tmp/sqlmap-0.9 $1/$SQLMAP_VENDOR
